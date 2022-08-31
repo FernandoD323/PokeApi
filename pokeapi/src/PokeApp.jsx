@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { getPokemons } from "./store/slices/thunks";
+import { getPokemons, getPokemonsbyName } from "./store/slices/thunks";
 import { useDispatch } from "react-redux/es/exports";
 import { useSelector } from "react-redux";
 
@@ -7,22 +7,34 @@ import { useSelector } from "react-redux";
 export const PokeApp = () => {
 
     const dispatch = useDispatch();
-    const { pokemons = [], page } = useSelector( state => state.pokemons );
-  
+    const { pokemons = [], page} = useSelector( state => state.pokemons );
+    
+    const nameP = 'golbat'
+    const dam = dispatch( getPokemonsbyName(nameP));
+
+
   
     useEffect(() => {
-      dispatch( getPokemons() );    
+      dispatch( getPokemons() );   
     }, [])
+    
     
   
     return (
       <>
+    
+          <ul>
+           {dam.name}
+          </ul>
+
           <h1>¡PokeApp!</h1>
           <hr />
-  
+        <input>
+
+        </input>
           <ul>
             {
-              pokemons.map( ({ name }) => (
+              pokemons.map( ({ name, url }) => (
                 <li key={ name }>{ name }</li>
               ))
             }
@@ -33,7 +45,14 @@ export const PokeApp = () => {
           >
             Next
           </button>
+
+          
+
+        
+
       </>
+
+      
     )
   }
   
