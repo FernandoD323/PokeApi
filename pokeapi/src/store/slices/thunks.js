@@ -15,7 +15,10 @@ export const getPokemons = ( page = 0) => {
 export const getPokemonsbyName = (namePokemon) => {
     return async( dispatch, getState ) => {
         const { data } = await pokeApi.get(`/pokemon/${namePokemon}`);
-        dispatch( getPokemonbyName({namePoke: data.id}) );
-        console.log(data.id)      
+        dispatch( getPokemonbyName({namePoke:data, sprites: data.sprites, namePokemon: namePokemon, abilities: data.abilities
+            , id: data.id
+        }));
+        console.log(data)
+            
     }
 }

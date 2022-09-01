@@ -4,9 +4,13 @@ import { createSlice } from '@reduxjs/toolkit';
 export const pokeSlice = createSlice({
     name: 'pokemon',
     initialState: {
+        id: '',
         page: 0,
         pokemons: [],
-        namePoke:[],
+        namePoke: '',
+        namePokemon: '',
+        sprites: '',
+        abilities:[],
 
     },
     reducers: {
@@ -18,10 +22,14 @@ export const pokeSlice = createSlice({
 
         getPokemonbyName: ( state, action ) => {
             state.namePoke = action.payload.namePoke;
+            state.namePokemon = action.payload.namePokemon;
+            state.sprites = action.payload.sprites;
+            state.abilities = action.payload.abilities;
+            state.id = action.payload.id;
         }
 
     }
 });
 
-export const { setPokemons,getPokemonbyName } = pokeSlice.actions;
+export const { setPokemons, getPokemonbyName } = pokeSlice.actions;
 
