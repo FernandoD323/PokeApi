@@ -7,24 +7,21 @@ import { useSelector } from "react-redux";
 export const PokeApp = () => {
 
     const dispatch = useDispatch();
-    const { pokemons = [], page} = useSelector( state => state.pokemons );
+    const { pokemons = [], page, } = useSelector( state => state.pokemons );
     
-    const nameP = 'golbat'
-    const dam = dispatch( getPokemonsbyName(nameP));
 
-
-  
     useEffect(() => {
-      dispatch( getPokemons() );   
+      dispatch( getPokemons());   
     }, [])
     
-    
+    // const nameP1 = 'golbat'
+    dispatch( getPokemonsbyName('charizard'));
   
     return (
       <>
     
           <ul>
-           {dam.name}
+        
           </ul>
 
           <h1>¡PokeApp!</h1>

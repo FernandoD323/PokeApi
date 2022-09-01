@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+
 export const pokeSlice = createSlice({
     name: 'pokemon',
     initialState: {
         page: 0,
         pokemons: [],
-        name:'',
+        namePoke:[],
 
     },
     reducers: {
@@ -13,10 +14,14 @@ export const pokeSlice = createSlice({
 
             state.page = action.payload.page;
             state.pokemons = action.payload.pokemons;
-            state.name = action.payload.name;
+        },
+
+        getPokemonbyName: ( state, action ) => {
+            state.namePoke = action.payload.namePoke;
         }
+
     }
 });
 
-export const { setPokemons } = pokeSlice.actions;
+export const { setPokemons,getPokemonbyName } = pokeSlice.actions;
 
