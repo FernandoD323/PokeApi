@@ -17,9 +17,12 @@ export const PokeApp = () => {
       dispatch( getPokemons());  
       dispatch( getPokemonsbyName(nameP)); 
     }, [])
-    const nameP = 'golbat'
+   
 
 
+    const [ searchPokemon, setSearchPokemon ] = useState('');
+        
+    const nameP = searchPokemon
 
     // const { stats } = namePoke;
     // console.log(stats.base_stat)
@@ -37,6 +40,21 @@ export const PokeApp = () => {
     //   atributos();
   
     // }, [])
+
+    // const [ inputValue, setInputValue ] = useState('');
+
+    // const onInputChange = ({ target }) => {
+    //     setInputValue( target.value );
+    // }
+
+    // const onSubmit = ( event ) => {
+    //     event.preventDefault();
+    //     if( inputValue.trim().length <= 1) return;
+
+    //     // setCategories( categories => [ inputValue, ...categories ]);
+    //     setInputValue('');
+    //     onNewCategory( inputValue.trim() );
+    // }
     
     return (
       <>
@@ -84,6 +102,14 @@ export const PokeApp = () => {
           </button>
 
           
+            <input 
+            
+             value={searchPokemon}
+             placeholder='Buscar pokemón'
+             onChange={e => setSearchPokemon(e.target.value)}
+
+            />
+       
 
         
 
