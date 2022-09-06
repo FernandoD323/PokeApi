@@ -7,6 +7,6 @@ export const store = configureStore({
     namePoke: pokeSlice.reducer,
     sprites: pokeSlice.reducer,
     abilities: pokeSlice.reducer,
-    id: pokeSlice.reducer,
+    atributes: pokeSlice.reducer
   },
 });

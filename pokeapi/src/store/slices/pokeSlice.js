@@ -11,6 +11,7 @@ export const pokeSlice = createSlice({
         namePokemon: '',
         sprites: '',
         abilities:[],
+        atributes: []
 
     },
     reducers: {
@@ -20,16 +21,20 @@ export const pokeSlice = createSlice({
             state.pokemons = action.payload.pokemons;
         },
 
+        setAtributes: ( state, action ) => {
+
+            state.atributes = action.payload.atributes;
+        },
+
         getPokemonbyName: ( state, action ) => {
             state.namePoke = action.payload.namePoke;
             state.namePokemon = action.payload.namePokemon;
             state.sprites = action.payload.sprites;
             state.abilities = action.payload.abilities;
-            state.id = action.payload.id;
         }
 
     }
 });
 
-export const { setPokemons, getPokemonbyName } = pokeSlice.actions;
+export const { setPokemons, setAtributes, getPokemonbyName } = pokeSlice.actions;
 
