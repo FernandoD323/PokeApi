@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import { pokeApi } from "../api/pokeApi";
 import { getPokemonbyName, setPokemons} from "./pokeSlice";
 
