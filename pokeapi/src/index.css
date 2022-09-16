@@ -106,7 +106,7 @@ body {
 input {
   background-color: white;
   border-radius: 5px;
-  border: 1px solid rgb(97, 32, 158);
+  border: 1px solid rgb(127, 0, 246);
   color: black;
   font-size: 1.2rem;
   outline: none;
@@ -136,5 +136,197 @@ input {
   text-decoration: none;
   border-radius: 40px;
   margin: 0 45%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
+
+
+@media screen and (max-width:1441px){
+  
+  .card__items {
+  
+    max-width: 350px;
+    width: 30%;
+    margin-left: 2.6rem;
+    
+  }
+
+  .card__cta{
+    margin: 0 37%;
+    margin-bottom: 1%;
+  }
+
+  input {
+    margin: 2% 25% 4% 17%;
+  }
+  
+  
+  .title{
+    margin-left: 38%;
+    
+  }
+  
+  .hr{
+    margin: 1% 30% 0 14%;
+  }
+}
+
+
+@media screen and (max-width:1281px){
+  
+  .card__items {
+  
+    max-width: 350px;
+    width: 30%;
+    margin-left: 3.5rem;
+    
+  }
+
+  .card__cta{
+ 
+    margin: 0 43%;
+    margin-bottom: 1%;
+  }
+
+  input {
+    margin: 2% 25% 4% 25%;
+  }
+  
+  
+  .title{
+    margin-left: 45%;
+    
+  }
+  
+  .hr{
+    margin: 1% 25% 0 25%;
+  }
+}
+
+
+
+@media screen and (max-width:1025px){
+  
+  .card__items {
+  
+    max-width: 350px;
+    width: 30%;
+    margin-left: 5.2rem;
+    
+  }
+
+  .card__cta{
+ 
+    margin: 0 35%;
+    margin-bottom: 1%;
+  }
+
+  input {
+    margin: 2% 0% 4% 18%;
+  }
+  
+  
+  .title{
+    margin-left: 35%;
+    
+  }
+  
+  .hr{
+    margin: 1% 34% 0 20%;
+  }
+}
+
+
+
+@media screen and (max-width:769px){
+  
+  .card__items {
+    margin-left: 4rem;
+    
+  }
+
+  
+}
+
+
+@media screen and (max-width:426px){
+  
+  .card__items {
+    width: 290px;
+    
+  }
+
+  .card__cta{
+ 
+    margin: 0 27%;
+    margin-bottom: 1%;
+  }
+
+  input {
+    margin: 2% 0% 4% 25%;
+  }
+  
+  
+  .title{
+    margin-left: 34%;
+    
+  }
+  
+  .hr{
+    margin: 1% 20% 0 20%;
+  }
+}
+
+
+
+@media screen and (max-width:376px){
+  
+  .card__items {
+    width: 260px;
+    
+  }
+
+  .card__cta{
+ 
+    margin: 0 25%;
+    margin-bottom: 1%;
+  }
+
+  input {
+    margin: 3% 2% 4% 22%;
+    width: 57%;
+  }
+  
+  
+  .title{
+    margin-left: 32%;
+    
+  }
+  
+  .hr{
+    margin: 1% 15% 0 20%;
+  }
+}
+
+
+
+@media screen and (max-width:321px){
+  
+  .card__items {
+    width: 220px;
+    
+  }
+
+  
+
+  input {
+    margin: 3% 2% 4% 22%;
+    width: 65%;
+  }
+  
+
+  
+  .hr{
+    margin: 1% 8% 0 18%;
+  }
+}
+  
